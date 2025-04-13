@@ -76,9 +76,11 @@ Now that I may not always working with the this codebase, but I believe this is 
 Since I might not always be working with this particular codebase, I'd like to design a new approach to ensure that the solution remains reusable in case I need to use aws-mwaa-local-runner again. Here's the new requirements:
 
 1. Everything from the old requirements. 
-2. I want this cli to be packaged for easy download and execution on UNIX-based system (something like .sh script).
+2. I want this cli to be packaged for easy download and execution on UNIX-based system (something like .sh script). Additionally, by adding the CLI tool to the system PATH, it can be used as a background/system utility, making it easier to be used from any location, independent from any specific project.
 
 I believe this is a good improvements to provide a robust and portable solution for quickly testing whether my code changes will work before they are pushed to remote environment.
+
+By installing the CLI tool in the system PATH, developers can quickly invoke it from anywhere on the system. This approach promotes reusability across multiple projects and ensures testing becomes a more simple process.
 
 ## Conclusions 
 
