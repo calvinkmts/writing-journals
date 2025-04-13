@@ -52,7 +52,7 @@ So I created the requirements:
 
 1. I want to be able to `git clone` the aws-mwaa-local-runner repository.
 2. I want to be able to switch versions for the aws-mwaa-local-runner, in this case it's managed through tagging in the their GitHub Repository.
-3. I want to be able to easily copy my DAGs or my DAG factory code easily, this is important because say if the team picked up the project and it turns out testing locally is such a chore then why do it, that's the idea of this little cli app and why I want push this test locally paradigm.
+3. I want to be able to easily copy my DAGs or my DAG factory code easily, this is important because say if the team picked up the project and it turns out testing locally is such a chore then why do it, that's the idea of this little cli app.
 4. I want to be able to call the existing cli from my cli that already exists in the aws-mwaa-local-runner.
 
 Once these requirements were defined, the rest was a matter of coding. 
@@ -71,9 +71,7 @@ python_monorepo/
 
 ### Improvement
 
-Now that I may not always working with the this codebase, but I believe this is like the idea if in case I needed to use aws-mwaa-local-runner again.
-
-Since I might not always be working with this particular codebase, I'd like to design a new approach to ensure that the solution remains reusable in case I need to use aws-mwaa-local-runner again. Here's the new requirements:
+Since I might not always be working with this particular codebase and I feel this is the right step, I'd like to design a new approach to ensure that the solution remains reusable in case I need to use aws-mwaa-local-runner again. Here's the new requirements:
 
 1. Everything from the old requirements. 
 2. I want this cli to be packaged for easy download and execution on UNIX-based system (something like .sh script). Additionally, by adding the CLI tool to the system PATH, it can be used as a background/system utility, making it easier to be used from any location, independent from any specific project.
