@@ -1,0 +1,9 @@
+flowchart TD
+    A[Write Lambda Code] --> B[Push code to git repository]
+    B --> C[CI/CD push code to AWS Lambda]
+    C --> D[Run AWS Lambda to generate new DAG]
+    D -- Passes --> E[Check MWAA environent]
+    D -- Fails --> A
+    E -- Passes --> F[Development Finished]
+    E -- Fails --> A
+
