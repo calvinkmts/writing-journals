@@ -1,0 +1,7 @@
+flowchart TD
+    A[Write DAGs or Factory Code] --> B[Test locally with aws-mwaa-local-runner]
+    B -- Fails --> A
+    B -- Passes --> C[Push code to git repository]
+    C --> D[CI/CD to update DAG or factory code on MWAA]
+    D --> E[Development Finished]
+
